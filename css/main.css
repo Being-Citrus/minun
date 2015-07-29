@@ -2,7 +2,7 @@
 body{
   margin:0;
   padding:0;
-  background: #f4f4f4;
+  background: #F4F4F4;
   background-size: cover;
   font-family: 'montserratregular', sans-serif;
   color: #666;
@@ -348,23 +348,22 @@ transition: all 1s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-
+.banner-page{
+  color: #f4f4f4;
+  background: #666;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
 .content-page{
   position: relative;
-  top: 120px;
+  top: 180px;
   width: 100%;
-  max-width: 1000px;
-  margin: 30px auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  padding: 10px 0px 20px;
 }
 .item-page{
-
+  max-width: 1000px;
+  margin: 30px auto;
 }
 .item-page h1{
   text-align: center;
@@ -393,24 +392,13 @@ transition: all 1s ease-in-out;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 .team{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
   margin-top: 20px;
 }
 .item-team{
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin-bottom: 20px;
+  max-width: 500px;
+  width: 50%;
+  float: left;
 }
 .item-team h3, .item-team h4{
   padding: 5px 20px;
@@ -420,19 +408,20 @@ transition: all 1s ease-in-out;
 }
 .item-team img{
   width: 100%;
-  min-width: 500px;
+  opacity:1;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.item-team img:hover{
+  opacity:0;
+  cursor:crosshair;
 }
 
 /* special image width tweak for multiviews*/
-@media screen and (max-width: 1000px), screen and (max-device-width:  1000px) {
-  .item-team img{
-    min-width: 333px;
-    width: 100%;
-  }
-}
 @media screen and (max-width: 660px), screen and (max-device-width:  660px) {
-  .item-team img{
-    min-width: 300px;
+  .item-team{
     width: 100%;
+    max-width: 660px;
   }
 }

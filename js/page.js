@@ -1,5 +1,7 @@
 function hoverColorPage(ele,newColor){
-  $(ele).css({"color" : newColor});
+  if(ele.className.indexOf("banner-page") < 0){ $(ele).css({"color" : newColor});}
+  console.log(ele.className);
+  $(".banner-page").css({"background" : newColor});
   $(newColor).css({"opacity" : "1"});
   if(newColor == '#666'){
     $('.logo-page img').css({"opacity" : "0"});
@@ -32,7 +34,7 @@ function loadPage(page){
 }
 
 $(document).ready(function(){
-    preloadimages('images/hex-light.png', 'images/hex-grey.png', 'images/hex-orange.png', 'images/hex-blue.png', 'images/hex-green.png', 'images/hex-maroon.png');
+    preloadimages('images/hex-grey.png', 'images/hex-orange.png', 'images/hex-blue.png', 'images/hex-green.png', 'images/hex-maroon.png');
     $.ajax({
         url: "sounds/tap.mp3",
         success: function() {
