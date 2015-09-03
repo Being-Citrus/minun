@@ -1,3 +1,0 @@
-# Minun
-
-## Citrus Website Redesign
