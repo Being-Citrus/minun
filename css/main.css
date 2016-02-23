@@ -7,8 +7,15 @@ body{
   font-family: 'montserratregular', sans-serif;
   color: #666;
 }
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #666;
+}
 .load-overlay{
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   z-index:1002;
@@ -19,7 +26,7 @@ body{
   overflow:hidden;
 }
 .loading{
-  position:absolute;
+  position:fixed;
   z-index:1000;
   width:100%;
   height:100%;
@@ -375,7 +382,7 @@ transition: all 1s ease-in-out;
 }
 .item-page p{
   font-family: 'montserratlight';
-  text-align: justify;
+  text-align: left;
   font-size: 0.95em;
   padding: 0px 20px;
 }
@@ -410,13 +417,19 @@ transition: all 1s ease-in-out;
   float: left;
   background: #333;
 }
+.item-work2{
+  max-width: 500px;
+  width: 50%;
+  float: left;
+  background: #000;
+}
 .item-team h3, .item-team h4, .item-work h3, .item-work h4{
   padding: 5px 20px;
   margin:0;
   font-weight: normal;
   font-family: 'montserratlight';
 }
-.item-team img, .item-work img{
+.item-team img, .item-work img, .item-work2 img{
   width: 100%;
   opacity:1;
   -webkit-transition: all .5s ease-in-out;
@@ -431,10 +444,51 @@ transition: all 1s ease-in-out;
   opacity:0.7;
   cursor:crosshair;
 }
+.item-work2 img:hover{
+  opacity:0.6;
+  cursor:crosshair;
+}
+.portfolio-icons{
+  text-align: center;
+}
+.portfolio-icons a{
+  margin: 0px 10px;
+}
+
+.pop-box{
+  z-index: 998;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.pb-close{
+  z-index: 998;
+  position: fixed;
+  background: rgba(0,0,0,.6);
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+.pb-img img{
+  z-index: 999;
+  position: fixed;
+  max-height: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* special image width tweak for multiviews*/
 @media screen and (max-width: 660px), screen and (max-device-width:  660px) {
   .item-team{
+    width: 100%;
+    max-width: 660px;
+  }
+  .item-work2{
     width: 100%;
     max-width: 660px;
   }
@@ -451,6 +505,10 @@ transition: all 1s ease-in-out;
   .work{
     width: 100%;
     max-width: 500px;
+  }
+  .pb-img img{
+    height: auto;
+    width: 90%;
   }
 }
 @media screen and (max-width: 499px), screen and (max-device-width:  499px) {

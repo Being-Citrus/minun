@@ -13,7 +13,11 @@
   </style>
 </head>
 <body>
-  <div class="loading"><img src="images/loading_min.gif" /></div>
+  <!--<div class="loading"><img src="images/loading_min.gif" /></div>-->
+  <div class="pop-box">
+    <div class="pb-img"></div>
+    <div class="pb-close" onclick="$('.pop-box').hide()"></div>
+  </div>
   <div class="load-overlay"></div>
   <a href="javascript:loadPage('.')" onmouseover="hoverColorPage(this,'#CE2464')" onmouseout="hoverColorPage(this,'#666')">
     <div class="logo-page">
@@ -37,66 +41,128 @@
   <div class="content-page banner-page" onmouseover="hoverColorPage(this,'#CE2464')" onmouseout="hoverColorPage(this,'#666')">
     <div class="item-page"><h1> Portfolio</h1><hr/></div>
     <div class="item-page">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+      <p class="portfolio-icons" style="text-align: center;">
+        <a href="#ld"><img src="images/portfolio/icons/ld.svg" width="100"></a>
+        <a href="#gd"><img src="images/portfolio/icons/gd.svg" width="100"></a>
+        <a href="#ud"><img src="images/portfolio/icons/ud.svg" width="100"></a>
+        <a href="#wd"><img src="images/portfolio/icons/wd.svg" width="100"></a>
+      </p>
     </div>
   </div>
   <div class="content-page">
-    <div class="item-page"><h1> Logo Design</h1><hr/></div>
+    <div class="item-page"><h1 id="ld"> Logo Design</h1><hr/></div>
     <div class="item-page work">
       <div class="item-work">
-        <div><img src="images/portfolio/logo/016-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/016-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/014-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/014-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/015-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/015-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/013-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/013-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/012-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/012-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/011-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/011-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/010-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/010-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/003-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/003-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/008-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/008-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/007-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/007-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/006-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/006-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/005-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/005-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/004-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/004-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/009-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/009-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/002-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/002-01.png" /></div>
       </div>
       <div class="item-work">
-        <div><img src="images/portfolio/logo/001-01.png" /></div>
+        <div class="portfolio-thumb"><img src="images/portfolio/logo/001-01.png" /></div>
       </div>
       <div style="clear:both"></div>
+    </div>
+    <div class="item-page"><h1 id="gd"> Graphic Design</h1><hr/></div>
+    <div class="item-page work">
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/gfx/001-01.png" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/gfx/002-01.png" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/gfx/003-01.png" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/gfx/004-01.png" /></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="item-page"><h1 id="ud"> UI Design</h1><hr/></div>
+    <div class="item-page"><h3 style="text-align: center; font-weight: 400; text-transform: uppercase">Autocube</h3></div>
+    <div class="item-page work">
+      <div class="item-work2">
+        <div class="portfolio-thumb"><img src="images/portfolio/uid/001-01.png" /></div>
+      </div>
+      <div class="item-work2">
+        <div class="portfolio-thumb"><img src="images/portfolio/uid/002-01.png" /></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="item-page"><h1 id="wd"> Web Design</h1><hr/></div>
+    <div class="item-page"><h3 style="text-align: center; font-weight: 400; text-transform: uppercase">KOLOSSUS DIGITAL, AUSTRALIA</h3></div>
+    <div class="item-page work">
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/web/001-01.jpg" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/web/002-01.jpg" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/web/003-01.jpg" /></div>
+      </div>
+      <div class="item-work">
+        <div class="portfolio-thumb"><img src="images/portfolio/web/004-01.jpg" /></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="item-page footer">
+      <hr>
+      <p style="text-align: center"> &copy; 2016 Citrus Designs </p>
     </div>
   </div>
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/jquery-ui.js" type="text/javascript"></script>
   <script src="js/page.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $('.portfolio-thumb img').on("click", function(){
+      var popImg="<img src='"+$(this).attr('src').replace("-01","-02")+"' >";
+      $(".pb-img").html(popImg);
+      $(".pop-box").fadeIn(100);
+    });
+  </script>
 </body>
 </html>
