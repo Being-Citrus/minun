@@ -1,6 +1,5 @@
 function hoverColorPage(ele,newColor){
   if(ele.className.indexOf("banner-page") < 0){ $(ele).css({"color" : newColor});}
-  console.log(ele.className);
   $(".banner-page").css({"background" : newColor});
   $(newColor).css({"opacity" : "1"});
   if(newColor == '#666'){
@@ -11,12 +10,12 @@ function hoverColorPage(ele,newColor){
 function loadingOff(){
   setTimeout(function(){
     $('.loading img').css({"width": "200px" ,"margin-left": "-100px" ,"margin-top": "-60px" ,"opacity":"0" });
-  }, 1500);
+  }, 100);
   setTimeout(function(){
     $('.loading').fadeOut("slow", function(){
           // $('.sketch img').attr('src',sketchHome);
     });
-  }, 2000);
+  }, 200);
 }
 
 var myimages=new Array()
@@ -27,13 +26,39 @@ function preloadimages(){
     }
 }
 function loadPage(page){
-  console.log("inside loadpage");
+  if(page == '.'){
+  if($(window).width()<=499){
+    $('.logo-page-container').css({"left":"calc(100% - 80px)", "box-shadow": "none"});
+    $('.mobile-menu-page').css({"left":"0"});
+    var tColor = $('.logo-page-container').html().split("hoverColorPage(this,'")[1].split("'")[0];
+    setTimeout(function(){
+      $('.logo-page-container').html("<a href='javascript: hideMobileMenu(&apos;"+tColor+"&apos;)'><img src='images/close.svg'></a>");
+    }, 400);
+  }
+  }
+  else{
   $('.load-overlay').fadeIn("slow", function(){
     window.location=page;
   });
 }
+}
+function loadPageDirect(page){
+  $('.load-overlay').fadeIn("slow", function(){
+    window.location=page;
+  });
+}
+function hideMobileMenu(tColor){
+  if($(window).width()<=499){
+    $('.logo-page-container').css({"left":"0", "box-shadow": "0 0 5px rgba(0,0,0,.2)"});
+    $('.mobile-menu-page').css({"left":"calc(80px - 100%)"});
+    var tHtml = '<a href="javascript:loadPage(&apos;.&apos;)" onmouseover="hoverColorPage(this,&apos;'+tColor+'&apos;)" onmouseout="hoverColorPage(this,&apos;#666&apos;)"> <div class="logo-page"> <img id="EB7B3C" src="images/hex-orange.png" /> <img id="30A8D5" src="images/hex-blue.png" /> <img id="CE2464" src="images/hex-maroon.png" /> <img id="82BE19" src="images/hex-green.png" /> </div></a>';
+    setTimeout(function(){
+      $('.logo-page-container').html(tHtml);
+    }, 300);
+  }
+}
 
-$(document).ready(function(){
+$(window).on("load", function() {
     preloadimages('images/hex-grey.png', 'images/hex-orange.png', 'images/hex-blue.png', 'images/hex-green.png', 'images/hex-maroon.png');
     $.ajax({
         url: "sounds/tap.mp3",
