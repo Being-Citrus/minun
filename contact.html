@@ -20,7 +20,7 @@
   </div>
   <div class="load-overlay"></div>
   <div class="logo-page-container">
-  <a href="javascript:loadPage('.')" onmouseover="hoverColorPage(this,'#30A8D5')" onmouseout="hoverColorPage(this,'#666')">
+  <a href="javascript:loadPage('.')" onmouseover="hoverColorPage(this,'#72a01c')" onmouseout="hoverColorPage(this,'#666')">
     <div class="logo-page">
     <img id="EB7B3C" src="images/hex-orange.png" />
     <img id="30A8D5" src="images/hex-blue.png" />
@@ -49,41 +49,55 @@
     <li><a href="javascript:loadPage('contact.html')" onmouseover="hoverColorPage(this,'#72a01c')" onmouseout="hoverColorPage(this,'#666')">Contact Us</a></li>
   </ul>
   </div>
-  <div class="content-page banner-page" onmouseover="hoverColorPage(this,'#30A8D5')" onmouseout="hoverColorPage(this,'#666')">
-    <div class="item-page"><h1> Services</h1><hr/></div>
-    <div class="item-page">
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      </p>
-    </div>
-  </div>
-  <div class="content-page">
+  <div class="content-page banner-page" onmouseover="hoverColorPage(this,'#72a01c')" onmouseout="hoverColorPage(this,'#666')">
+    <div class="item-page"><h1> Contact Information</h1><hr/></div>
     <div class="item-page team">
-      <div class="item-serv">
-        <img src="images/serv/wd.svg" />
+      <div class="item-team">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
       </div>
-      <div class="item-serv">
-      <img src="images/serv/ld.svg" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
-      </div>
-      <div class="item-serv">
-        <img src="images/serv/gd.svg" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
-      </div>
-      <div class="item-serv">
-        <img src="images/serv/ud.svg" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
-      </div>
-      <div class="item-serv">
-        <img src="images/serv/bi.svg" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
-      </div>
-      <div class="item-serv">
-        <img src="images/serv/cg.svg" />
+      <div class="item-team">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra gravida consequat. In ultricies eget orci sit amet rhoncus. Aliquam erat volutpat. Aliquam porttitor ligula at dui posuere, quis tincidunt ex sagittis.</p>
       </div>
       <div style="clear:both"></div>
+    </div>
+  </div>
+  <div class="content-page">
+    <div class="item-page"><h1> Mail us </h1><hr/></div>
+    <div class="item-page contact">
+      <form action="mail.php" method="post" target="mail-frame">
+      <div class="contact-row">
+        <div class="contact-cell"><h5> Name </h5></div>
+        <div class="contact-cell"><input type="text" name="name" required></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-cell"><h5> Email </h5></div>
+        <div class="contact-cell"><input type="text" name="email" required></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-cell"><h5> Services </h5></div>
+        <div class="contact-cell">
+          <input type="checkbox" name="wd"> Web Design/Development <br>
+          <input type="checkbox" name="ld"> Logo Design <br>
+          <input type="checkbox" name="gd"> Graphic Design <br>
+          <input type="checkbox" name="ud"> UI Design <br>
+          <input type="checkbox" name="bi"> Complete Brand Identity <br>
+          <input type="checkbox" name="cg"> Customized Gifts <br>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-cell"><h5> Add a message </h5></div>
+        <div class="contact-cell"><textarea name="message" col="20" required></textarea></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-cell"></div>
+        <div class="contact-cell"><input type="submit" value="Submit"></div>
+      </div>
+    </form>
+    <div class="contact-row">
+      <div class="contact-cell">
+        <iframe name="mail-frame" id="mail-frame"></iframe>
+      </div>
+    </div>
     </div>
     <div class="item-page footer">
       <hr>

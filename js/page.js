@@ -26,14 +26,19 @@ function preloadimages(){
     }
 }
 function loadPage(page){
-  if(page == '.'){
   if($(window).width()<=499){
+  if(page == '.'){
     $('.logo-page-container').css({"left":"calc(100% - 80px)", "box-shadow": "none"});
     $('.mobile-menu-page').css({"left":"0"});
     var tColor = $('.logo-page-container').html().split("hoverColorPage(this,'")[1].split("'")[0];
     setTimeout(function(){
       $('.logo-page-container').html("<a href='javascript: hideMobileMenu(&apos;"+tColor+"&apos;)'><img src='images/close.svg'></a>");
     }, 400);
+  }
+  else{
+    $('.load-overlay').fadeIn("slow", function(){
+      window.location=page;
+    });
   }
   }
   else{
@@ -51,7 +56,7 @@ function hideMobileMenu(tColor){
   if($(window).width()<=499){
     $('.logo-page-container').css({"left":"0", "box-shadow": "0 0 5px rgba(0,0,0,.2)"});
     $('.mobile-menu-page').css({"left":"calc(80px - 100%)"});
-    var tHtml = '<a href="javascript:loadPage(&apos;.&apos;)" onmouseover="hoverColorPage(this,&apos;'+tColor+'&apos;)" onmouseout="hoverColorPage(this,&apos;#666&apos;)"> <div class="logo-page"> <img id="EB7B3C" src="images/hex-orange.png" /> <img id="30A8D5" src="images/hex-blue.png" /> <img id="CE2464" src="images/hex-maroon.png" /> <img id="82BE19" src="images/hex-green.png" /> </div></a>';
+    var tHtml = '<a href="javascript:loadPage(&apos;.&apos;)" onmouseover="hoverColorPage(this,&apos;'+tColor+'&apos;)" onmouseout="hoverColorPage(this,&apos;#666&apos;)"> <div class="logo-page"> <img id="EB7B3C" src="images/hex-orange.png" /> <img id="30A8D5" src="images/hex-blue.png" /> <img id="CE2464" src="images/hex-maroon.png" /> <img id="72a01c" src="images/hex-green.png" /> </div></a>';
     setTimeout(function(){
       $('.logo-page-container').html(tHtml);
     }, 300);
@@ -60,22 +65,5 @@ function hideMobileMenu(tColor){
 
 $(window).on("load", function() {
     preloadimages('images/hex-grey.png', 'images/hex-orange.png', 'images/hex-blue.png', 'images/hex-green.png', 'images/hex-maroon.png');
-    $.ajax({
-        url: "sounds/tap.mp3",
-        success: function() {
-          $.ajax({
-              url: "sounds/tap.ogg",
-              success: function() {
-                $.ajax({
-                    url: "sounds/tap.aac",
-                    success: function() {
-                        console.log("loaded sounds");
-                        loadingOff();
-                    }
-                });
-              }
-          });
-        }
-    });
-
+    loadingOff();
 });

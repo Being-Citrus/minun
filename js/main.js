@@ -1,4 +1,4 @@
-var sketchHome = 'images/sketch.gif?x='+Math.floor(Math.random()*100000);
+//var sketchHome = 'images/sketch.gif?x='+Math.floor(Math.random()*100000);
 function hoverColor(ele,newColor){
   if($(window).width()<=420){
     $(ele).css({"color" : "#f4f4f4", "background" : newColor});
@@ -53,7 +53,6 @@ else{
       adjustHome();
       setTimeout(function(){
           $('.menu-home').addClass('shadow');
-          $.playSound('sounds/tap');
       }, 1100);
       // $('.sketch img').attr('src',sketchHome);
 
@@ -75,25 +74,8 @@ function loadPage(page){
   });
 }
 $(window).on("load", function() {
-    preloadimages('images/logo-light.png', 'images/logo-grey.png', 'images/logo-orange.png', 'images/logo-blue.png', 'images/logo-green.png', 'images/logo-maroon.png', sketchHome);
-    $.ajax({
-        url: "sounds/tap.mp3",
-        success: function() {
-          $.ajax({
-              url: "sounds/tap.ogg",
-              success: function() {
-                $.ajax({
-                    url: "sounds/tap.aac",
-                    success: function() {
-                        console.log("loaded sounds");
-                        loadingOff();
-                    }
-                });
-              }
-          });
-        }
-    });
-
+    preloadimages('images/logo-light.png', 'images/logo-grey.png', 'images/logo-orange.png', 'images/logo-blue.png', 'images/logo-green.png', 'images/logo-maroon.png');
+    loadingOff();
 });
 $(window).on('resize', function(){
   adjustHome();
