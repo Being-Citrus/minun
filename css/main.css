@@ -665,9 +665,9 @@ transition: all 1s ease-in-out;
   .content-page{
     top: 0px;
   }
-  .pb-left,
-  .pb-right {
-    width: 20px;
+  .pb-left img,
+  .pb-right img{
+    width: 12px;
   }
   .mobile-menu-page{
     display: block;
