@@ -55,4 +55,18 @@ $(".pb-img").swipe( {
     }
   }
 });
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+    if($('.pop-box').css('display')!="none"){
+    var params = $(".pb-left a").attr('href').split("(")[1].split(")")[0].replace(/'/g,"").split(",");
+    loadPortImg(params[0].trim(), params[1].trim());
+    }
+  }
+  else if(e.keyCode == 39) { // right
+    if($('.pop-box').css('display')!="none"){
+    var params = $(".pb-right a").attr('href').split("(")[1].split(")")[0].replace(/'/g,"").split(",");
+    loadPortImg(params[0].trim(), params[1].trim());
+    }
+  }
+});
 });
